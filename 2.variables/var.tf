@@ -5,9 +5,9 @@ variable "intergervalue" {
   default=100
 }
 
-output "printing sample name" {
+output "printing_sample_name" {
   value = var.sample
 }
-output "printing integer" {
+output "printing_integer" {
   value=var.intergervalue
 }
