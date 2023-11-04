@@ -9,5 +9,5 @@ output "printing_sample_name" {
   value = var.sample
 }
 output "printing_integer" {
-  value=var.intergervalue
+  value="value of name is ${var.intergervalue}"
 }
