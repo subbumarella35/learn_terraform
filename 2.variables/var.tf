@@ -34,6 +34,7 @@
 
  #3. map
  variable "map_ex" {
+    type = map(string)
     default = {       
         Inter = {
             name= "m.p.c"
