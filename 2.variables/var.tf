@@ -35,17 +35,21 @@
  #3. map
  variable "map_ex" {
     type = map(string)
-    default={
-    Inter={
-        name= "m.p.c"
-        fee="10,000"
-        city="CTP"
-    }
+    default={       
+       Inter={
+            name= "m.p.c"
+            fee="10,000"
+            city="CTP"
+        }
+        Degree={
+            name="mp.c.s"
+            fee="20,000"
+            city="HYD"
+        }
    }
  }
 
  output "printing_values" {
-   #count=length(var.map_ex)
    value = var.map_ex
-
+   
  }
