@@ -50,6 +50,6 @@
  }
 
  output "printing_values" {
-   value = var.map_ex["Inter"]
+   value = var.map_ex["Inter"]["name"]
    
  }
