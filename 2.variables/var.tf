@@ -41,14 +41,11 @@
         fee="10,000"
         city="CTP"
     }
-    Degree={
-        name="mp.c.s"
-        fee="20,000"
-        city="HYD"
-    }
    }
  }
 
  output "printing_values" {
-   value=var.map_ex
+   #count=length(var.map_ex)
+   value = var.map_ex
+
  }
