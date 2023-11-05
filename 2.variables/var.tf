@@ -32,23 +32,28 @@
 #    default=["aws","azure","gcp"]
 #  }
 
- #3. map
- variable "map_ex" {
-    default = {       
-        Inter = {
-            name= "m.p.c"
-            fee="10,000"
-            city="CTP"
-        }
-        Degree = {
-            name="mp.c.s"
-            fee="20,000"
-            city="HYD"
-        }
-   }
- }
+#  #3. map
+#  variable "map_ex" {
+#     default = {       
+#         Inter = {
+#             name= "m.p.c"
+#             fee="10,000"
+#             city="CTP"
+#         }
+#         Degree = {
+#             name="mp.c.s"
+#             fee="20,000"
+#             city="HYD"
+#         }
+#    }
+#  }
+variable "env" {  
+}
+output "printing_value" {
+  value=var.env
 
- output "printing_values" {
-   value = var.map_ex["Inter"]["name"]
+}
+#  output "printing_values" {
+#    value = var.map_ex["Inter"]["name"]
    
- }
+#  }
