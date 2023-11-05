@@ -47,12 +47,16 @@
 #         }
 #    }
 #  }
-variable "env" {  
+variable "env" {
+  
 }
-output "printing_value" {
-  value=var.env
+variable "name" {
+  
+}
+output "printing_values" {
+  value="${var.env} and ${var.name}"
+}
 
-}
 #  output "printing_values" {
 #    value = var.map_ex["Inter"]["name"]
    
