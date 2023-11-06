@@ -8,7 +8,7 @@ resource "aws_instance" "ec2ex"{
     ami=data.aws_ami.amiex.id
     instance_type="t2.micro"
     tags={
-        Name="Example2"
+        Name=var.name
     }
     vpc_security_group_ids = [aws_security_group.security_group_ex.id]
 }
@@ -37,3 +37,5 @@ resource "aws_security_group" "security_group_ex"{
     }
 
 }
+
+variable "name"{}
