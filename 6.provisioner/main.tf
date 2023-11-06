@@ -11,9 +11,8 @@ resource "aws_instance" "ec2ex"{
         Name="Provisioner_Example"
     }
     vpc_security_group_ids = ["sg-04add09f73452cb05"]
-}
-
-provisioner "remote-exec" {
+    
+    provisioner "remote-exec" {
     connection {
         type="ssh"
         user="centos"
@@ -26,4 +25,5 @@ provisioner "remote-exec" {
     ]
 
 
+}
 }
