@@ -14,7 +14,7 @@ resource "aws_instance" "ec2ex"{
 }
 
 resource "aws_security_group" "security_group_ex"{
-    name="ex-allow-all"
+    name=var.name
     description="example security group"
 
 
@@ -33,7 +33,7 @@ resource "aws_security_group" "security_group_ex"{
         cidr_blocks=["0.0.0.0/0"]
     }
     tags = {
-        Name = "example-security-group"
+        Name = var.name
     }
 
 }
