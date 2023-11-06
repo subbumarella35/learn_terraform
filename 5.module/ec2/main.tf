@@ -40,9 +40,9 @@ resource "aws_security_group" "security_group_ex"{
 
 variable "name"{}
 
+output "name" {
+  value=var.name
+}
 output "public_ip"{
     value=aws_instance.ec2ex.public_ip
-}
-output "name"{
-    value=aws_instance.ec2ex.name
 }
