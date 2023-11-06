@@ -11,4 +11,4 @@ resource "aws_instance" "web"{
         Name="sample"
     }
 
-} 
+}  
