@@ -10,8 +10,9 @@ resource "aws_instance" "web"{
     tags={
         Name="sample"
     }
-    lifecycle {
-      prevent-destroy=true
-    }
+
+     lifecycle {
+    prevent_destroy = true
+  }
 
 }  
