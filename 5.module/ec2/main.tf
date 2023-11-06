@@ -18,22 +18,22 @@ resource "aws_security_group" "security_group_ex"{
     description="example security group"
 
 
- // Ingress rules (inbound traffic)
- ingress{
-    description="SSH"
-    from_port=22
-    to_port=22
-    protocol="tcp"
-    cidr_block=["0.0.0.0/0"]
- }
- engress{
-    from_port=0
-    to_port=0
-    protocol="-1"
-    cidr_block=["0.0.0.0/0"]
- }
-  tags = {
-    Name = "example-security-group"
-  }
+    // Ingress rules (inbound traffic)
+    ingress{
+        description="SSH"
+        from_port=22
+        to_port=22
+        protocol="tcp"
+        cidr_block=["0.0.0.0/0"]
+    }
+    engress{
+        from_port=0
+        to_port=0
+        protocol="-1"
+        cidr_block=["0.0.0.0/0"]
+    }
+    tags = {
+        Name = "example-security-group"
+    }
 
 }
