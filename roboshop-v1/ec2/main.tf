@@ -51,7 +51,7 @@ resource "aws_security_group" "security_group_ex"{
 
 }
 
-resource "aws_route53_zone" "roboshop_route53" {
+resource "aws_route53_record" "roboshop_route53" {
   zone_id   =   "Z04770651WQZPPJRLW6XF"
   name  =   "${var.name}-dev"
   type  =   "A"
