@@ -3,11 +3,11 @@ variable "classs" {
     default=["apple","banana","grap"]
 }
 locals {
-  my_list=tolist(var.classs)
+    my_list=tolist(var.classs)
 }
 output "printgClassName" {
  
-  count=length(my_list)
-  value = local.my_list[count.index]
+    count=length(my_list)
+    value = local.my_list[count.index]
 
 }
