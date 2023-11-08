@@ -1,10 +1,18 @@
+data "aws_ami" "example"{
+    owners=["973714476881"]
+    most_recent = true
+    name_regex="Centos-8-DevOps-Practice"
+}
+
 variable "classs" {    
-    default=["apple","banana","grap"]
+    default=["frontend","mongodb","catelogue"]
 }
 
-output "printgClassName" {
- 
-    for_each=var.classs
-    value = each.value
-
-}
+resource "aws_instance" "web"{
+    for_each = var.classs
+    ami =   data.aws_ami.example.id
+    instance_type   ="t2.micro"
+    tags={
+        Name=each.value
+    }
+}  
