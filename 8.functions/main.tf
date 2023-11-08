@@ -5,7 +5,7 @@ data "aws_ami" "example"{
 }
 
 variable "classs" {    
-    type = map(string)
+    type = set(string)
     default=["frontend","mongodb","catelogue"]
 }
 
