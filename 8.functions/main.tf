@@ -1,8 +1,13 @@
 variable "classs" {
-  default="devops"
+    type = set(string)
+    default=["apple","banana","grap"]
 }
-
+locals {
+  my_list=tolist(var.classs)
+}
 output "printgClassName" {
-  value = var.classs
+ 
+  count=length(my_list)
+  value = local.my_list[count.index]
 
 }
